@@ -1,0 +1,43 @@
+/*=====================
+VARIABLES DECLARATION
+=====================*/
+
+/******
+Colors
+*******/
+
+$primary-color: #2c9cf2;
+$secondary-color: #e25d43;
+$black: #192127;
+$grey: #72797e; /* Darkest grey */
+$grey-2: #afbac4;
+$grey-3: #bbc1c6;
+$grey-4: #e3e5e9;
+$grey-5: #f7f9fc; /* Lightest grey */ 
+$white: #fff;
+
+/******
+Typo
+*******/
+
+$font-family: 'Rubik', sans-serif;
+$base-line-height: 1.6;
+$pulse: $base-line-height * 1rem;
+
+/******
+Transition
+*******/
+
+$trans-duration: 0.3;
+
+/******
+Box Shadow
+*******/
+
+$box-shadow: 0 5px 10px 5px $grey-3;
+
+/******
+Border radius 
+*******/
+
+$border-radius: 1px;

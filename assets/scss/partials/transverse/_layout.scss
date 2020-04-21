@@ -1,0 +1,22 @@
+/*=====================
+LAYOUT
+=====================*/
+
+/******
+Content wrapper
+*******/
+
+.content-wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-flow: column wrap;
+  -webkit-box-align: baseline;
+          align-items: baseline;
+
+  padding: $base-line-height * 1em;
+  max-width: 96em;
+  margin: 0 auto;
+  margin-bottom: $base-line-height * 1em;
+}

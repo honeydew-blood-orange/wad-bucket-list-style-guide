@@ -1,0 +1,29 @@
+/*=====================
+HEADER
+=====================*/
+
+/******
+Layout
+*******/
+
+.header-wrapper {
+  border-bottom: 1px solid $grey-4;
+  margin-bottom: $base-line-height * 3em;
+  .content-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+  }
+  &__logo {
+    margin-right: $base-line-height * 1em;
+  }
+  &__search {
+    -webkit-box-flex: 2;
+            flex-grow: 2;
+    @include tablet {
+      margin-right: $base-line-height * 1em;
+    }
+  }
+}

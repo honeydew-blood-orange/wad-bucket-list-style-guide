@@ -1,0 +1,114 @@
+/*=====================
+CARDS
+=====================*/
+
+/******
+Layout
+*******/
+
+.card {
+  margin-bottom: $base-line-height * 1em;
+  @include tablet {
+    margin-right: $base-line-height * 1em;
+    width: calc(50% - #{$base-line-height * 1em} );
+  }
+  @include desktop {
+    width: calc(25% - #{$base-line-height * 1em} );
+  }
+}
+
+.cards-container {
+  margin-bottom: $base-line-height * 3em;
+  .content-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+  }
+  @include tablet {
+    margin-right: -($base-line-height * 1em); // to get rid of the right margin on the cards
+  }
+}
+
+
+/******
+Card design 
+*******/
+
+.card__thumb {
+  display: block;
+  position: relative;
+  &:hover, 
+  &:focus {
+    text-decoration: none;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  &__owner { // card__owner
+    margin: $base-line-height * 1rem;
+    padding: 2px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: $border-radius;
+
+    background: $primary-color;
+    color: $white;
+    text-transform: uppercase;
+  }
+  &__title { //card__title
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 0.8rem;
+
+    padding: $base-line-height * 1rem;
+    h3 {
+      color: $white;
+    }
+    span {
+      color: $grey-2;
+    }
+  }
+}
+
+
+/******
+Card buttons 
+*******/
+
+.card__cta, 
+%card__cta {
+  padding: $base-line-height * 1rem; // Rewrite some styling properties of the buttons 
+  border: none;
+  border-right: 1px solid $grey;
+  border-radius: 0;
+  &:first-of-type {
+    -webkit-box-pack: left; // overwrite the center alignment on the btn element 
+            justify-content: left;
+  }
+  &:last-of-type {
+    border: none;
+  }
+  &:hover, 
+  &:focus {
+    border: none;
+  }
+}
+
+.card__footer {
+  display: -webkit-box;
+  display: flex;
+  .card__cta--big {
+    @extend %card__cta;
+    -webkit-box-flex: 2;
+            flex-grow: 2;
+  }
+}

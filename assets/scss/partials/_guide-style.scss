@@ -1,0 +1,185 @@
+/*=====================
+STYLE GUIDE STYLES
+=====================*/
+
+/******
+Atom page
+*******/
+
+ol {
+  color: $primary-color;
+}
+
+/*Colors section*/
+
+.color-container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+}
+
+.color__block,
+%block {
+  height: 100px;
+  width: 100px;
+  border-radius: $border-radius;
+  margin-right: $base-line-height * 0.5em;
+  &--primary {
+    @include colors-bg($primary-color);
+  }
+  &--secondary {
+    @include colors-bg($secondary-color);
+  }
+  &--black {
+    @include colors-bg($black);
+  }
+  &--grey {
+    @include colors-bg($grey);
+  }
+  &--grey-2 {
+    @include colors-bg($grey-2);
+  }
+  &--grey-3 {
+    @include colors-bg($grey-3);
+  }
+  &--grey-4 {
+    @include colors-bg($grey-4);
+  }
+  &--grey-5 {
+    @include colors-bg($grey-5);
+  }
+}
+
+/*Typo section*/
+
+.typo__ex,
+%typo__ex {
+  color: $black;
+  &--italic {
+    @extend %typo__ex;
+    font-style: italic;
+  }
+  &--bold {
+    @extend %typo__ex;
+    font-weight: 700;
+  }
+  &--bold-italic {
+    @extend %typo__ex;
+    font-style: italic;
+    font-weight: 700;
+  }
+}
+
+.typo {
+  margin-bottom: $base-line-height * 1em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  @include desktop {
+    max-width: 70%;
+  }
+}
+
+th, td {
+  border-bottom: 1px solid $grey;
+}
+
+th, td {
+  padding: ($base-line-height * 0.5em) ($base-line-height * 0.25em);
+  @include tablet {
+    padding: ($base-line-height * 1em) ($base-line-height * 0.5em);
+  }
+}
+
+/*Button section*/
+
+.button-container {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  div {
+    margin-bottom: $base-line-height * 1em;
+    margin-right: $base-line-height * 0.5em;
+  }
+}
+
+/*Form section*/
+
+.input-container {
+  margin-bottom: $base-line-height * 1em;
+  width: 100%;
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    &[type="checkbox"] {
+      width: auto; // For the display in Chrome and IE > the checkbox fits its container 
+    }
+  }
+  @include desktop {
+    width: 50%;
+  }
+}
+
+/*SVG section*/
+
+.svg-container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  li {
+    margin-bottom: $base-line-height * 0.25em;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    svg {
+      margin-right: $base-line-height * 0.5em;
+    }
+  }
+}
+
+/*Logo section*/
+
+.logo__background {
+  background: $black;
+  margin-bottom: $base-line-height * 1em;
+  padding: $base-line-height * 0.5em;
+  &--no {
+    padding: $base-line-height * 0.5em;
+    margin-bottom: $base-line-height * 1em;
+  }
+}
+
+/******
+IE 10 11 
+*******/
+
+/* IE special style for the flexbox slignement*/ 
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .ie-width {
+    width: 100%;
+    a {
+      display: inline-block; /* Aton page > Alignment of the tag*/
+    }
+  }
+  .card {
+    height: 100%;
+  }
+}
+
+
+
+

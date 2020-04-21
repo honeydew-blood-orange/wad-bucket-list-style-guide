@@ -1,0 +1,56 @@
+/*=====================
+NAVIGATION
+=====================*/
+
+/******
+Main nav
+*******/
+
+.main-nav,
+%nav {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    margin-right: $base-line-height * 1em;
+  }
+  li:last-of-type {
+    margin-right: 0;
+  }
+  a {
+    color: $black;
+  }
+  a:hover, 
+  a:focus {
+    color: $grey;
+    text-decoration: none;
+  }
+}
+
+/******
+Second nav
+*******/
+
+.second-nav {
+  @extend %nav;
+  border-bottom: 1px solid $grey-4;
+  margin-bottom: $base-line-height * 1em;
+  width: 100%;
+  a {
+    color: $primary-color;
+  }
+  a:hover, 
+  a:focus {
+    color: $black;
+  }
+  li {
+    padding-bottom: $base-line-height * 1em;
+    margin-bottom: -1px;
+  }
+  .active {
+    border-bottom: 1px solid $black;
+    a {
+      color: $black;
+    }
+  }
+}

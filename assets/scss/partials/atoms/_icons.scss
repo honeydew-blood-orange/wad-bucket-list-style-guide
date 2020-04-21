@@ -1,0 +1,64 @@
+/*=====================
+ICONS
+=====================*/
+
+/******
+User avatar 
+*******/
+
+.avatar--little {
+  border-radius: 50%;
+}
+
+/******
+Logo
+*******/
+
+/* Basic */
+
+.logo,
+%logo {
+  color: $black;
+  font-weight: bold;
+  &:hover, 
+  &:focus {
+    text-decoration: none;
+  }
+  em {
+    color: $primary-color;
+    font-style: normal;
+  } 
+}
+
+/* Logo white + blue */
+
+.logo--white {
+  @extend %logo;
+  color: $white;
+  em {
+    color: $primary-color;
+  }
+}
+
+/* Logo all white */
+
+.logo--all-white {
+  @extend %logo;
+  color: $white;
+  em {
+    color: $white;
+  }
+}
+
+/******
+Icons
+*******/
+
+.icon {
+  fill: $grey;
+  margin-right: 2px;
+  .btn:hover &, 
+  .btn:focus & {
+    fill: currentColor;
+  }
+}

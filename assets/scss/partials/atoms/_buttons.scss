@@ -1,0 +1,105 @@
+/*=====================
+BUTTONS
+=====================*/
+
+/******
+Standard button
+*******/
+
+.btn,
+%btn {
+  padding: $base-line-height * 1rem;
+  border-radius: $border-radius;
+
+  color: $black;
+  background: $white;
+  border: 1px solid $grey;
+  
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.btn:hover,
+.btn:focus,
+%btn {
+  -webkit-transition: $trans-duration * 1s;
+  transition: $trans-duration * 1s;
+
+  background: $grey-2;
+  border: 1px solid $grey-2;
+  color: $white;
+
+  text-decoration: none; // For the a type of button 
+}
+
+
+/******
+CTA Button
+*******/
+
+.btn--action {
+  @extend %btn;
+
+  color: $white;
+  background: $primary-color;
+  border: 1px solid $primary-color;
+}
+
+.btn--action:hover,
+.btn--action:focus {
+  @extend %btn;
+  @include hover-effect($primary-color);
+}
+
+
+/******
+Warning button
+*******/
+
+.btn--warning {
+  @extend %btn;
+
+  color: $white;
+  background: $secondary-color;
+  border: 1px solid $secondary-color;
+} 
+
+.btn--warning:hover,
+.btn--warning:focus {
+  @extend %btn;
+  @include hover-effect($secondary-color);
+}
+
+/******
+Tag
+*******/
+
+.tag {
+  padding: ($base-line-height * 0.25em) ($base-line-height * 0.5em);
+  margin-right: $base-line-height * 0.25em; 
+  margin-bottom: $base-line-height * 0.5em;
+  display: block;
+  
+  border: 1px solid $grey;
+  color: $grey;
+  border-radius: $border-radius;
+  
+  text-transform: uppercase;
+  
+  &:hover, 
+  &:focus {
+    background: $grey-2;
+    border: 1px solid $grey-2;
+    color: $white;
+
+    text-decoration: none;
+  }
+}

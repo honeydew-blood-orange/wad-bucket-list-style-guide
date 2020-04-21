@@ -1,0 +1,22 @@
+@import "partials/variables";
+@import "partials/mixins";
+
+@import "partials/atoms/typography";
+@import "partials/atoms/buttons";
+@import "partials/atoms/icons";
+
+@import "partials/transverse/forms";
+@import "partials/transverse/helpers"; 
+@import "partials/transverse/header";
+@import "partials/transverse/layout";
+@import "partials/transverse/footer";
+
+@import "partials/content/nav";
+@import "partials/content/goal-description";
+@import "partials/content/card";
+@import "partials/content/comments";
+@import "partials/content/followers";
+
+@import "partials/guide-style";
+
+

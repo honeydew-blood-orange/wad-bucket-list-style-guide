@@ -1,0 +1,21 @@
+/*=====================
+COMMENTS 
+=====================*/
+
+/******
+Comment
+*******/
+
+.comment {
+  display: -webkit-box;
+  display: flex;
+  p {
+    margin-top: 0;
+  }
+  .comment__img {
+    margin-right: $base-line-height * 1em;
+  }
+  @include desktop { // Desktop layout container added
+    max-width: 50%;
+  }
+}

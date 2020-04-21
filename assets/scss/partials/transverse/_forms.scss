@@ -1,0 +1,179 @@
+/*=====================
+FORMS
+=====================*/
+
+/******
+Basic form 
+*******/
+
+/*Layout*/ 
+
+.form {
+  width: 100%;
+  @include desktop { // Desktop layout container 
+    max-width: 50%;
+  }
+}
+
+.form__input-group {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical; // Mobile layout input under label 
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin: ($base-line-height * 1em);
+  input {
+    box-sizing: border-box; // input fits the container width
+    width: 100%;
+  }
+  @include tablet { //Tablet + desktop layout  
+    -webkit-box-orient: horizontal; // input and label on the same line 
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-align: center;
+            align-items: center;
+    .input-group__label--container {
+      width: 30%;
+    }
+    .input-group__input--container {
+      -webkit-box-flex: 1;
+              flex-grow: 1;
+    }
+  }
+}
+
+.form__cta {
+  display: -webkit-box;
+  display: flex;
+  margin: ($base-line-height * 1em);
+  -webkit-box-align: center;
+          align-items: center;
+  .cta__link {
+    width: 30%;
+  }
+  .cta__btn {
+    -webkit-box-flex: 2;
+            flex-grow: 2;
+    button {
+      width: 100%;
+    }
+  }
+}
+
+/*Label*/ 
+
+.input-group__label {
+  color: $black;
+  padding-bottom: 0.4rem;
+}
+
+/*Input*/ 
+
+.input-group__input, 
+%input-group__input {
+  padding: $base-line-height * 1rem;
+
+  font-size: 1.3rem;
+
+  color: $grey;
+  background: white;
+
+  border: 1px solid $grey-3;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  &:focus {
+    border: 1px solid $grey;
+  }
+  &--error {
+    @extend %input-group__input;
+    border: 1px solid $secondary-color;
+  }
+}
+
+/*Messages*/ 
+
+.form__message {
+  font-size: 1.4em;
+  &--error {
+    color: $secondary-color;
+  }
+}
+
+/******
+Search form
+*******/
+
+.form--search {
+  width: 100%;
+}
+
+.form__input-group--search {
+  display: -webkit-box;
+  display: flex;
+  margin: ($base-line-height * 1em) 0;
+  box-shadow: $box-shadow;
+  .input-group__input {
+    border: 1px solid $primary-color;
+    -webkit-box-flex: 2;
+            flex-grow: 2;
+    &:hover, 
+    &:focus {
+      border: 1px solid $black;
+    }
+    &::-webkit-input-placeholder {
+      color: transparent; // Hide the placeholder on tablet and mobile
+    }
+    &::-moz-placeholder {
+      color: transparent; // Hide the placeholder on tablet and mobile
+    }
+    &:-ms-input-placeholder {
+      color: transparent; // Hide the placeholder on tablet and mobile
+    }
+    &::-ms-input-placeholder {
+      color: transparent; // Hide the placeholder on tablet and mobile
+    }
+    &::placeholder {
+      color: transparent; // Hide the placeholder on tablet and mobile
+    }
+    @include desktop {
+      color: initial; // Initial color of the element on desktop
+    }
+  }
+  .btn--action {
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+    margin-left: -1px;
+  }
+}
+
+/******
+Leave a comment 
+*******/
+
+.form--comm {
+  display: -webkit-box;
+  display: flex;
+  margin: ($base-line-height * 1em);
+  width: 100%;
+  @include desktop { // Desktop layout container added
+    max-width: 50%;
+  }
+}
+
+.form__input-group--comm {
+  -webkit-box-flex: 2;
+          flex-grow: 2;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin-right: $base-line-height * 1em;
+  textarea {
+    margin-bottom: $base-line-height * 1em;
+  }
+}
+
+.form--comm__img {
+  padding: ($base-line-height * 2em) ($base-line-height * 1em) 0 0;
+}

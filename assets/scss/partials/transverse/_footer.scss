@@ -1,0 +1,43 @@
+/*=====================
+FOOTER
+=====================*/
+
+/******
+Footer
+*******/
+
+.footer-container {
+  background: $black;
+  padding-bottom: $base-line-height * 3em;
+  padding-top: $base-line-height * 1em; 
+  .content-wrapper {
+    @include tablet {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row;
+    }
+  }
+  &__logo {
+    margin-right: $base-line-height * 1em;
+  }
+  &__nav {
+    ul {
+      display: -webkit-box;
+      display: flex;
+    }
+    a{
+      color: $grey;
+    }
+    li {
+      margin-right: $base-line-height * 1rem;
+    }
+  }
+  &__brand {
+    @include tablet {
+      margin-left: auto;
+    }
+  }
+  @include tablet {
+    padding-top: $base-line-height * 3em;
+  }
+}

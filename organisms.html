@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Organisms - My Bucket List</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!--SVG decalaration-->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <defs>
+      <symbol id="done">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+      </symbol>
+      <symbol id="favorite">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <header>
+    <div class="header-wrapper">
+      <div class="content-wrapper">
+        <!--Logo-->
+        <div class="header-wrapper__logo">
+          <a class="logo" href="index.html"><span><em>My</em> Bucket List - Style Guide</span></a>
+        </div>
+        <!--Menu-->
+        <nav class="header-wrapper__main-nav">
+          <ul class="main-nav bare-list">
+            <li><a href="index.html">Atoms</a></li>
+            <li><a href="molecules.html">Molecules</a></li>
+            <li><a class="current" href="organisms.html">Organisms</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="content-wrapper">
+      <h1 class="ie-width">Organisms</h1>
+      <!--Page sections-->
+      <ol class="ie-width">
+        <li><a href="#01">Header</a></li>
+        <li><a href="#02">Footer</a></li>
+        <li><a href="#03">My Goal</a></li>
+        <li><a href="#04">User space</a></li>
+      </ol>
+    </div>
+
+    <div class="content-wrapper">
+      <h2 class="ie-width" id="01">01. Header</h2>
+    </div>
+
+    <!--SG > Header-->
+    <div class="header-wrapper">
+      <div class="content-wrapper">
+        <!--Logo-->
+        <div class="header-wrapper__logo">
+          <a class="logo" href="index.html"><span><em>My</em> Bucket List</span></a>
+        </div>
+        <!--Search-->
+        <form class="header-wrapper__search" action="/" method="get">
+          <div class="form__input-group--search">
+            <label class="input-group__label sr-only" for="search">Search</label>
+            <input class="input-group__input" type="text" name="sg" id="search" placeholder="E.g. Swimming with dolphins" />
+            <button class="btn--action">Search</button>
+          </div>
+        </form>
+        <!--Nav-->
+        <div class="header-wrapper__main-nav">
+          <ul class="main-nav bare-list">
+            <li><a href="#">My Goals</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <h2 class="ie-width" id="02">02. Footer</h2>
+    </div>
+
+    <!--SG > Footer-->
+    <div class="footer-container">
+      <div class="content-wrapper">
+        <!--Logo-->
+        <div class="footer-container__logo">
+          <a class="logo--white" href="index.html"><span><em>My</em> Bucket List</span></a>
+        </div>
+        <!--Links-->
+        <div class="footer-container__nav">
+            <ul class="bare-list">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Style Guide</a></li>
+              <li><a href="#">Term of Use</a></li>
+            </ul>
+        </div>
+        <div class="footer-container__brand">
+          <span>&copy; EPFL 2018</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="content-wrapper">
+      <h2 class="ie-width" id="03">03. My goals</h2>
+    </div>
+
+    <!--SG > Cards-->
+    <div class="cards-container">
+      <div class="content-wrapper">
+        <!--Card-->
+        <div class="card">
+          <a class="card__thumb" href="#">
+            <img src="assets/images/swim-with-turtles-small.jpg" 
+                srcset="assets/images/swim-with-turtles-small.jpg 300w,
+                        assets/images/swim-with-turtles-large.jpg 600w"
+                alt="turtle swimming in the sea" />
+            <span class="card__owner little">Owner</span>
+            <div class="card__title">
+              <h3>Swim with a sea turtle</h3>
+              <span class="little">1,184 are doing this</span>
+            </div>
+          </a>
+          <form class="card__footer" action="/" method="get">
+            <button class="btn action card__cta--big">
+              <svg class="icon" height="18" viewBox="0 0 24 24" width="18" role="presentation">
+              <use xlink:href="#favorite"></use>
+            </svg>
+              Like</button>
+            <button class="btn action card__cta">
+              <svg class="icon" height="18" viewBox="0 0 24 24" width="18" role="presentation">
+              <use xlink:href="#done"></use>
+            </svg>
+              Edit</button>
+          </form>
+        </div>
+
+        <!--Card-->
+        <div class="card">
+          <a class="card__thumb" href="#">
+            <img src="assets/images/swim-with-turtles-small.jpg" 
+                srcset="assets/images/swim-with-turtles-small.jpg 300w,
+                        assets/images/swim-with-turtles-large.jpg 600w"
+                alt="turtle swimming in the sea" />
+            <span class="card__owner little">Owner</span>
+            <div class="card__title">
+              <h3>Swim with a sea turtle</h3>
+              <span class="little">1,184 are doing this</span>
+            </div>
+          </a>
+          <form class="card__footer" action="/" method="get">
+            <button class="btn action card__cta--big">
+              <svg class="icon" height="18" viewBox="0 0 24 24" width="18" role="presentation">
+              <use xlink:href="#favorite"></use>
+            </svg>
+              Like</button>
+            <button class="btn action card__cta">
+              <svg class="icon" height="18" viewBox="0 0 24 24" width="18" role="presentation">
+              <use xlink:href="#done"></use>
+            </svg>
+              Edit</button>
+          </form>
+        </div>
+
+        <!--Card-->
+        <div class="card">
+          <a class="card__thumb" href="#">
+            <img src="assets/images/swim-with-turtles-small.jpg" 
+                srcset="assets/images/swim-with-turtles-small.jpg 300w,
+                        assets/images/swim-with-turtles-large.jpg 600w"
+                alt="turtle swimming in the sea" />
+            <span class="card__owner little">Owner</span>
+            <div class="card__title">
+              <h3>Swim with a sea turtle</h3>
+              <span class="little">1,184 are doing this</span>
+            </div>
+          </a>
+          <form class="card__footer" action="/" method="get">
+            <button class="btn action card__cta--big">
+              <svg class="icon" height="18" viewBox="0 0 24 24" width="18" role="presentation">
+              <use xlink:href="#favorite"></use>
+            </svg>
+              Like</button>
+            <button class="btn action card__cta">
+              <svg class="icon" height="18" viewBox="0 0 24 24" width="18" role="presentation">
+              <use xlink:href="#done"></use>
+            </svg>
+              Edit</button>
+          </form>
+        </div>
+
+        <!--Card-->
+        <div class="card">
+          <a class="card__thumb" href="#">
+            <img src="assets/images/swim-with-turtles-small.jpg" 
+                srcset="assets/images/swim-with-turtles-small.jpg 300w,
+                        assets/images/swim-with-turtles-large.jpg 600w"
+                alt="turtle swimming in the sea" />
+            <span class="card__owner little">Owner</span>
+            <div class="card__title">
+              <h3>Swim with a sea turtle</h3>
+              <span class="little">1,184 are doing this</span>
+            </div>
+          </a>
+          <form class="card__footer" action="/" method="get">
+            <button class="btn action card__cta--big">
+              <svg class="icon" height="18" viewBox="0 0 24 24" width="18" role="presentation">
+              <use xlink:href="#favorite"></use>
+            </svg>
+              Like</button>
+            <button class="btn action card__cta">
+              <svg class="icon" height="18" viewBox="0 0 24 24" width="18" role="presentation">
+              <use xlink:href="#done"></use>
+            </svg>
+              Edit</button>
+          </form>
+        </div>
+
+        <!--Card-->
+        <div class="card">
+          <a class="card__thumb" href="#">
+            <img src="assets/images/swim-with-turtles-small.jpg" 
+                srcset="assets/images/swim-with-turtles-small.jpg 300w,
+                        assets/images/swim-with-turtles-large.jpg 600w"
+                alt="turtle swimming in the sea" />
+            <span class="card__owner little">Owner</span>
+            <div class="card__title">
+              <h3>Swim with a sea turtle</h3>
+              <span class="little">1,184 are doing this</span>
+            </div>
+          </a>
+          <form class="card__footer" action="/" method="get">
+            <button class="btn action card__cta--big">
+              <svg class="icon" height="18" viewBox="0 0 24 24" width="18" role="presentation">
+              <use xlink:href="#favorite"></use>
+            </svg>
+              Like</button>
+            <button class="btn action card__cta">
+              <svg class="icon" height="18" viewBox="0 0 24 24" width="18" role="presentation">
+              <use xlink:href="#done"></use>
+            </svg>
+              Edit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <h2 class="ie-width" id="04">04. User space</h2>
+    </div>
+    
+    <!--SG > User space-->
+    <div class="user-space">
+      <div class="content-wrapper">
+
+        <div class="user-space__name ie-width">
+          <div>
+          <img class="avatar--little" src="assets/images/avatar.png" alt="User avatar with blue face" />
+          </div>
+          <h1>John Doe</h1>
+        </div>
+
+        <div class="user-space__menu">
+          <ul class="second-nav bare-list">
+            <li><a href="#">To do</a></li>
+            <li class="active"><a href="#">Completed</a></li>
+          </ul>
+        </div>
+
+        <div class="user-space__follower">
+          <div class="follower">
+            <div class="follower__img">
+              <img class="avatar--little" src="assets/images/avatar.png" alt="User avatar with blue face" />
+            </div>
+            <div class="follwer__info">
+              <a href="#">John Doe</a>
+              <span>3 goals</span>
+            </div>
+            <div class="follower__btn">
+              <button class="btn">Following</button>
+            </div>
+          </div>
+
+          <div class="follower">
+            <div class="follower__img">
+              <img class="avatar--little" src="assets/images/avatar.png" alt="User avatar with blue face" />
+            </div>
+            <div class="follwer__info">
+              <a href="#">John Doe</a>
+              <span>3 goals</span>
+            </div>
+            <div class="follower__btn">
+              <button class="btn">Following</button>
+            </div>
+          </div>
+
+          <div class="follower">
+            <div class="follower__img">
+              <img class="avatar--little" src="assets/images/avatar.png" alt="User avatar with blue face" />
+            </div>
+            <div class="follwer__info">
+              <a href="#">John Doe</a>
+              <span>3 goals</span>
+            </div>
+            <div class="follower__btn">
+              <button class="btn">Following</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    
+  </main>
+
+  <footer class="footer-container">
+    <div class="content-wrapper">
+      <!--Logo-->
+      <div class="footer-container__logo">
+        <a class="logo--white" href="index.html"><span><em>My</em> Bucket List</span></a>
+      </div>
+      <div class="footer-container__brand">
+        <span>&copy; EPFL 2018 / <a href="http://anais-dchtm.ch/" target="_blank">Anaïs Dochtermann</a></span>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>

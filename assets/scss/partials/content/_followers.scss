@@ -1,0 +1,47 @@
+/*=====================
+FOLLOWER
+=====================*/
+
+/******
+Follower
+*******/
+
+.follower {
+  display: -webkit-box;
+  display: flex;
+  padding-bottom: $base-line-height * 1em;
+  border-bottom: 1px solid $grey;
+  margin-bottom: $base-line-height * 1em;
+  width: 100%;
+  &:last-of-type {
+    border-bottom: none;
+  }
+  &__img {
+    margin-right: $base-line-height * 1em;
+  }
+  &__btn {
+    margin-left: auto;
+  }
+  span {
+    display: block;
+  }
+}
+
+/******
+Layout
+*******/
+
+.user-space {
+  &__menu, 
+  &__follower {
+    width: 100%;
+  }
+}
+
+.user-space__name {
+  display: -webkit-box;
+  display: flex;
+  img {
+    margin-right: $base-line-height * 1em;
+  }
+}

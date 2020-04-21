@@ -1,0 +1,158 @@
+/*=====================
+TYPOGRAPHY
+=====================*/
+
+/******
+General
+*******/
+
+html {
+  font-family: $font-family;
+  font-size: 62.5%;
+  line-height: $base-line-height;
+  background: $white;
+}
+
+body {
+  color: $grey;
+  margin: 0;
+  padding: 0;
+}
+
+/******
+Basics
+*******/
+
+p, a, span, ul, ol, label, table, button {
+  font-size: 1.5rem;
+  line-height: $base-line-height;
+}
+
+
+/******
+Links
+*******/
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+  &:hover, 
+  &:focus {
+    text-decoration: underline;
+    -webkit-transition: $trans-duration * 1s;
+    transition: $trans-duration * 1s;
+  }
+}
+
+
+/******
+Headers
+*******/
+
+h1, h2, h3, h4, h5, h6, 
+.alpha, .beta, .gamma, .delta, .epsilon, .zeta {
+  font-weight: normal;
+  margin: 0 0 0.5em 0; 
+  padding: 0;
+}
+
+h1,
+.alpha {
+  font-size: 3.6em;
+  line-height: 1.2;
+  color: $black;
+  @include tablet {
+    font-size: 4em;
+  }
+  @include desktop {
+    font-size: 4.8em;
+  }
+}
+
+h2,
+.beta {
+  font-size: 2.8em;
+  line-height: 1.2;
+  color: $black;
+  @include tablet {
+    font-size: 3.2em;
+  }
+  @include desktop {
+    font-size: 3.6em;
+  }
+}
+
+h3,
+.gamma {
+  font-size: 2.4em;
+  line-height: 1.2;
+  color: $black;
+  @include tablet {
+    font-size: 2.8em;
+  }
+  @include desktop {
+    font-size: 2.8em;
+  }
+}
+
+h4,
+.delta {
+    font-size: 1.3em;
+    line-height: 1.5;
+    color: $grey;
+    text-transform: uppercase;
+    @include tablet {
+      font-size: 2.0em;
+    }
+    @include desktop {
+      font-size: 2.0em;
+    }
+}
+
+h5,
+.epsilon {
+    font-size: 1.4em;
+    line-height: 1.4;
+    color: $grey;
+    @include tablet {
+      font-size: 2.4em;
+    }
+    @include desktop {
+      font-size: 2.4em;
+    }
+}
+
+h6,
+.zeta {
+    font-size: 1.2em;
+    line-height: 1.4;
+    color: $grey;
+    @include tablet {
+      font-size: 1.6em;
+    }
+    @include desktop {
+      font-size: 1.6em;
+    }
+}
+
+/******
+Specifics 
+*******/
+
+.action {
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: $black;
+}
+
+.small {
+  font-size: 1.4em;
+  line-height: 1.4;
+}
+
+.current { // For the menu items 
+  color: $grey;
+  text-decoration: underline;
+}
